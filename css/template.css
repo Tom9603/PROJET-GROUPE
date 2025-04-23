@@ -1,35 +1,55 @@
+/************************ TOOLS ************************/
+
 body {
+    font-size: 16px;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #fdf6ec; /* Couleur de fond douce, proche du logo */
+    background-color: #F5CC8A;
     color: #2e1f0e; /* Texte foncé similaire aux contours du logo */
-  }
+}
 
-  header {
+header {
+    color: #F6CF8C;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
     background-color: #733C19;
-  }
+}
 
-  header img {
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #fdf6ec;
+    color: #F6CF8C;
+    font-size: 0.9rem;
+    background-color: #733C19;
+}
+
+header img {
     max-width: 150px;
     height: auto;
-  }
+}
 
-  h1 {
+/************************ GENERALITIES ************************/
+
+h1 {
     font-size: 2rem;
     margin-top: 1rem;
-  }
+    font-family: 'DynaPuff', sans-serif;
+    font-size: 4.37rem;
+}
 
-  main {
+main {
+    margin: 0 auto;
+    max-width: 1200px;
     text-align: center;
     padding: 2rem;
-  }
+    background-color: #D7872D;
+}
 
-  .cta-button {
-    background-color: #e94e3c; /* Couleur du cœur du logo */
+.cta-button {
+    background-color: #e94e3c;
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -37,16 +57,9 @@ body {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
 
-  .cta-button:hover {
+.cta-button:hover {
     background-color: #cc3d2d;
-  }
+}
 
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #fdf6ec;
-    color: #5a4430;
-    font-size: 0.9rem;
-  }
