@@ -3,6 +3,11 @@
 /****************** Charte graphique ************************/
 
 - LOGO OK
-- 
+-  
 -
--test tet=stvohqzeh
+
+
+/****************** IDEES ************************/
+
+
+* accepter les croquettes (cookies)
