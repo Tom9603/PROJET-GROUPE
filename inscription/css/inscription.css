@@ -1,0 +1,7 @@
+.field {
+    margin-bottom: 2rem;
+}
+
+input::placeholder {
+    white-space: pre-line;
+}

@@ -6,11 +6,24 @@
 - COULEUR OK
 -
 
-
 /****************** IDEES ************************/
-
 
 * accepter les croquettes (cookies)
+*
 
-/****************** IDEES ************************/
+/****************** FONCTIONALITIES ************************/
 
+Carte profil avec comme contenu :
+
+- photo
+- infos persos (race du chien, âge, pucé ou pas, ville)
+- des phrases d'accroche style : plutôt croquettes ou pâté ?
+- avec un fond différent des autres profils
+- pop d'une modale apres clic sur la card, si possible loader croquette/os avant affichage
+
+
+/****************** BONUS ************************/
+
+- POLICE POILUE POUR H2
+- slider auto page d'accueil en hover sur les photos
+- aspect poils dans le bas du header

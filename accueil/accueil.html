@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dog Dating</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik+Gemstones&display=swap"
+		rel="stylesheet">
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- CSS de normalisation (reset soft) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+		integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+	<link rel="stylesheet" href="../css/template.css">
+    <link rel="stylesheet" href="./css/accueil.css">
+
+</head>
+
+<body>
+
+	<!-- HEADER -->
+
+	<header class="header">
+		<div class="logo-container">
+			<svg viewBox="0 0 500 300" width="100%" height="300">
+				<!-- La courbe (invisible, mais le texte la suit) -->
+				<path id="arc" d="M 100 200 A 150 150 0 0 1 400 200" fill="none" />
+
+				<!-- Le texte qui suit la courbe -->
+				<text font-size="40" fill="#000" text-anchor="middle">
+					<textPath href="#arc" startOffset="50%">
+						DoggyDate
+					</textPath>
+				</text>
+			</svg>
+			<img src="http://147.93.52.14/test/img/logo-remove.png" alt="Logo Dog Dating">
+		</div>
+		<p>L'amour à poil</p>
+        <nav class="nav">
+			<ul>
+				<li><a href="#">Accueil</a></li>
+				<li><a href="#">Profiles</a></li>
+				<li><a href="#">Inscription</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- MAIN -->
+
+	<main class="container">
+
+        <section class="presentation">
+
+            <h2> Première visite ?  </h2>
+            <p>
+                Bienvenue sur DoggyDate, le premier site de rencontre pensé
+                 exclusivement pour nos fidèles compagnons à quatre pattes !
+                  Que votre chien soit un aventurier passionné de balades en
+                   forêt, un petit gourmet amateur de croquettes bio ou un
+                    grand sensible en quête d’un compagnon de jeu, ici, chaque
+                     museau trouve chaussure à sa patte. Créez son profil en
+                      quelques clics : photo, race, passions (oui, même "courir
+                       après les pigeons" est accepté), et partez à la découverte
+                        d'autres toutous avec qui partager promenades et câlins.
+                         Parce que l’amour, l’amitié et les aboiements joyeux, ça
+                          se partage aussi entre chiens !
+            </p>
+
+        </section>
+
+        <section class="menu-photo">
+            <h2 class="titre-section"> Profils du jour </h2>
+            <div class="slider slider1">
+                <div> <img src="./ressources/img/chien1.png"></div>
+                <div> <img src="./ressources/img/chien2.png"></div>
+                <div> <img src="./ressources/img/chienrobe.png"></div>
+            </div>
+
+            <div class="slider slider2">
+                <div> <img src="./ressources/img/chien2.png"></div>
+                <div> <img src="./ressources/img/chien1.png"></div>
+                <div> <img src="./ressources/img/chienrobe.png"></div>
+            </div>
+
+            <div class="slider slider3">
+                <div> <img src="./ressources/img/chienrobe.png"></div>
+                <div> <img src="./ressources/img/chien2.png"></div>
+                <div> <img src="./ressources/img/chien1.png"></div>
+            </div>
+        </section>
+
+		<p>Parce que nos amis à quatre pattes méritent aussi l'amour !</p>
+		<a href="../inscription/inscription.html" class="cta-button">Commencer</a>
+	</main>
+
+	<!-- FOOTER -->
+
+	<footer class="footer">
+		&copy; 2025 Dog Dating. Tous droits réservés.
+	</footer>
+
+    <script>
+        $(document).ready(function(){
+          $(".slider").bxSlider();
+        });
+      </script>
+
+</body>
+
+</html>

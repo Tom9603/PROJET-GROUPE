@@ -1,65 +1,155 @@
 /************************ TOOLS ************************/
+/* POLICES */
+@font-face {
+	font-family: 'HairyBeard', sans-serif;
+	src: url('Hairy_Beard.woff') format('woff'),
+		url('Hairy_Beard.ttf') format('truetype'),
+        url('HairyBeard.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Furry', sans-serif;
+	src: url('Furry.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	font-size: 62.5%; /* 1rem = 10px */
+	box-sizing: border-box;
+}
 
 body {
-    font-size: 16px;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #F5CC8A;
-    color: #2e1f0e; /* Texte foncé similaire aux contours du logo */
+	font-size: 1.6rem; /* 1.6rem = 16px */
+	margin: 0;
+	background-color: #F5CC8A;
+	color: #2e1f0e;
+	font-family: 'Nunito', sans-serif;
 }
 
 header {
-    color: #F6CF8C;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    background-color: #733C19;
+	color: #F6CF8C;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #733C19;
+	padding: 1em;
 }
 
 footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #fdf6ec;
-    color: #F6CF8C;
-    font-size: 0.9rem;
-    background-color: #733C19;
+	text-align: center;
+	padding: 1rem;
+	background-color: #fdf6ec;
+	color: #F6CF8C;
+	font-size: 0.9rem;
+	background-color: #733C19;
 }
 
 header img {
-    max-width: 150px;
-    height: auto;
+	max-width: 150px;
+	height: auto;
+	margin-top: 3em;
 }
 
 /************************ GENERALITIES ************************/
-
-h1 {
-    font-size: 2rem;
-    margin-top: 1rem;
-    font-family: 'DynaPuff', sans-serif;
-    font-size: 4.37rem;
+h2 {
+	font-weight: 400;
+	font-size: 2rem;
+	font-family: 'Rubik Gemstones', sans-serif;
 }
 
 main {
-    margin: 0 auto;
-    max-width: 1200px;
-    text-align: center;
-    padding: 2rem;
-    background-color: #D7872D;
+	margin: 0 auto;
+	max-width: 1200px;
+	text-align: center;
+	padding: 2rem;
+    padding-bottom: 3rem;
 }
 
 .cta-button {
-    background-color: #e94e3c;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+	background-color: #e94e3c;
+	color: white;
+	border: none;
+	padding: 1rem 2rem;
+	font-size: 1.2rem;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #cc3d2d;
+	background-color: white;
+	color: #e94e3c;
 }
 
+/************************* HEADER *************************/
+
+.logo-container {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.logo-container svg {
+	position: absolute;
+	margin: 0;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+.logo-container img {
+	width: 100px;
+	height: auto;
+	margin-top: 2em;
+}
+
+.logo-container text {
+	font-size: 8rem;
+	font-family: 'DynaPuff', sans-serif;
+	fill: #F6CF8C;
+	font-weight: bold;
+}
+
+header p {
+	font-size: 1.5rem;
+	margin: 0;
+	color: #F6CF8C;
+	text-align: center;
+}
+
+.nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4em;
+	padding-left: 1em;
+	margin: 1em 0 0 0;
+}
+
+.nav a {
+	text-decoration: none;
+	color: #F6CF8C;
+	font-size: 1.5rem;
+	font-weight: 400;
+	transition: color 0.3s;
+}
+
+.nav a:hover {
+	color: #e94e3c;
+}
