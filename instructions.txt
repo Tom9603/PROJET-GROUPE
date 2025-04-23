@@ -3,7 +3,7 @@
 /****************** Charte graphique ************************/
 
 - LOGO OK
--  
+- COULEUR OK
 -
 
 
@@ -11,3 +11,6 @@
 
 
 * accepter les croquettes (cookies)
+
+/****************** IDEES ************************/
+
