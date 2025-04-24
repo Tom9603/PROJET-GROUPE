@@ -14,6 +14,7 @@
   
   <link rel="stylesheet" href="../css/template.css">
   <link rel="stylesheet" href="./css/inscription.css">
+  <link rel="stylesheet" href="../loader/loader.css">
   <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
 
 </head>
@@ -38,16 +39,19 @@
     <nav class="nav">
         <ul>
             <li><a href="../accueil/accueil.html">Accueil</a></li>
-            <li><a href="../accueil/profil.html">Profiles</a></li>
+            <li><a href="../profil/profil.html">Profils</a></li>
             <li><a href="#">Inscription</a></li>
         </ul>
     </nav>
   </header>
   <!-- MAIN -->
   <main class="container">
+    <div class="os-container">
+        <img src="./ressources/os2.png" alt="Os" class="os">
+        <h2 class="os-title">Inscription</h2>
+    </div>
     <form method="post">
         <fieldset>
-            <h2 id="#inscription">Inscription<h2></h2>
             <div class="group-fields">
                 <div class="left-group">
                   <div class="field">
@@ -133,10 +137,16 @@
               </div>
               <hr>
               <div class="toolbar">
-                <a href="../profil/profil.html" class="cta-button">Enregistrer</a>              
+                <a href="../profil/profil.html" class="cta-button" id="loadButton">Enregistrer</a>            
         </fieldset>
     </form>
-
+    <div id="loaderModal" class="modal">
+        <div class="modal-content">
+            <img src="../loader/img/os.png" alt="Chargement..." class="loader-image" />
+            <div class="loader"></div> <!-- Loader animé -->
+            <p>Chargement...</p>
+        </div>
+    </div>
   </main>
   <!-- FOOTER -->
   <footer class="footer">
@@ -158,6 +168,20 @@
               bouton.classList.add("active");
             });
           });
+        });
+        const loadButton = document.getElementById('loadButton');
+        const loaderModal = document.getElementById('loaderModal');
+
+        // Fonction pour afficher la modal et démarrer le loader
+        loadButton.addEventListener('click', function(e) {
+            e.preventDefault(); // Empêcher la soumission du formulaire si nécessaire
+            loaderModal.style.display = 'flex'; // Afficher la modal
+
+            // Simulation du temps de chargement avant de rediriger
+            setTimeout(function() {
+                // Redirige vers la page souhaitée après 2 secondes
+                window.location.href = '../profil/profil.html'; // Remplace par l'URL de la page cible
+            }, 2000); // 2000 ms = 2 secondes
         });
       </script>
 </body>
