@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   <link rel="stylesheet" href="../css/template.css">
+  <link rel="stylesheet" href="./css/inscription.css">
   
 </head>
 <body>
@@ -33,6 +34,13 @@
       <img src="http://147.93.52.14/test/img/logo-remove.png" alt="Logo Dog Dating">
     </div>
     <p>L'amour à poil</p>
+    <nav class="nav">
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Profiles</a></li>
+            <li><a href="#">Inscription</a></li>
+        </ul>
+    </nav>
   </header>
   <!-- MAIN -->
   <main class="container">
@@ -40,82 +48,80 @@
     </div>
     <form method="post">
         <fieldset>
-            <div class="field identity">
-                <p>Saisissez vos wouafs personnels<p>
-                <label for="firstName">Nom</label>
-                <input type="text" id="firstName" />
-            </div>
-            <div class="field">
-                <label for="">Puce n° :</label>
-                <input type="text" id="" />
-            </div>
-            <div class="field localisation">
-                <label for="">Localisation :</label>
-                <input type="text" id="" />
-            </div>
-            <div>
-                <div class="field">
-                    <label for="text">Poids</label>
-                    <input type="text" id="" />
+            <div class="group-fields">
+                <div class="left-group">
+                  <div class="field">
+                    <label for="firstName">Nom</label>
+                    <input type="text" id="firstName" />
+                  </div>
+                  <div class="field">
+                    <label for="chip">Puce n° :</label>
+                    <input type="text" id="chip" />
+                  </div>
+                  <div class="field">
+                    <label for="location">Localisation :</label>
+                    <input type="text" id="location" />
+                  </div>
                 </div>
-                <div class="field">
-                    <label for="text">Taille</label>
-                    <input type="text" id="" />
+              
+                <div class="right-group">
+                  <div class="field">
+                    <label for="weight">Poids</label>
+                    <input type="text" id="weight" />
+                  </div>
+                  <div class="field">
+                    <label for="size">Taille</label>
+                    <input type="text" id="size" />
+                  </div>
+                  <div class="field">
+                    <label for="breed">Race :</label>
+                    <input type="text" id="breed" />
+                  </div>
                 </div>
-                <div class="field">
-                    <label for="">Race :</label>
-                    <input type="text" id="" />
-                </div>
-            </div>
+              </div>
+              
             <div class="img-profil">
                 <img src="http://147.93.52.14/test/img/icon1.png" alt="Ajouter une image">
             </div>
-            <div class="sex">
-                <p>Sexe :</p>
-                <input type="checkbox" name="option1" value="A"> Mâle
-                </label><br>
-                <label>
-                <input type="checkbox" name="option1" value="B"> Femelle
-                </label><br>
-                <label>
-                <input type="checkbox" name="option1" value="B"> Woof ?
-                </label><br>
-            </div>
-        <div class="search">
-            <p>Je recherche :</p>
-            <input type="checkbox" name="option1" value="A"> Mâle
-            </label><br>
-            <label>
-            <input type="checkbox" name="option1" value="B"> Femelle
-            </label><br>
-            <label>
-            <input type="checkbox" name="option1" value="B"> Woof ?
-            </label><br>
-        </div>
-        <div class="field select">
-            <p>Intéressé par :</p>
-            <select name="object">
-                <option value="0">Votre choix...</option>
-                <option value="q">Un reniflage d'un soir, sans lendemain</option>
-                <option value="g">Pour la vie, aussi fidèle qu'à mes maîtres</option>
-                <option value="b">Partager une gamelle</option>
-                <option value="b">De simples wouaf amicaux</option>
-                <div class="field">
-            </select>
-        </div>
-            <div>
-                <div>
-                    <p>Biographie</p>
-                    <textarea placeholder="Plutôt croquettes ou pâté ? Courir après les chats ou le facteur ? Présente-toi !"></textarea>
+            <div class="group-checkboxes">
+                <div class="sex">
+                  <p>Sexe :</p>
+                  <label><input type="checkbox" name="sex" value="male"> Mâle</label><br>
+                  <label><input type="checkbox" name="sex" value="female"> Femelle</label><br>
+                  <label><input type="checkbox" name="sex" value="woof"> Woof ?</label>
                 </div>
-                <div>
-                    <p>Mes passions :</p>
-                <textarea placeholder="Aboyer toute la journée, mordiller mes jouets..."></textarea>
+              
+                <div class="search">
+                  <p>Je recherche :</p>
+                  <label><input type="checkbox" name="search" value="male"> Mâle</label><br>
+                  <label><input type="checkbox" name="search" value="female"> Femelle</label><br>
+                  <label><input type="checkbox" name="search" value="woof"> Woof ?</label>
                 </div>
+              </div>              
+            <div class="field select">
+                <p>Intéressé par :</p>
+                <select name="object">
+                    <option value="0">Votre choix...</option>
+                    <option value="q">Un reniflage d'un soir, sans lendemain</option>
+                    <option value="g">Pour la vie, aussi fidèle qu'à mes maîtres</option>
+                    <option value="b">Partager une gamelle</option>
+                    <option value="b">De simples wouaf amicaux</option>
+                    <div class="field">
+                </select>
             </div>
+            <div class="group-textareas">
+                <div class="bio">
+                  <p>Biographie</p>
+                  <textarea placeholder="Plutôt croquettes ou pâté ? Courir après les chats ou le facteur ? Présente-toi !"></textarea>
+                </div>
+                <div class="passions">
+                  <p>Mes passions :</p>
+                  <textarea placeholder="Aboyer toute la journée, mordiller mes jouets..."></textarea>
+                </div>
+              </div>              
         </fieldset>
         <div class="toolbar">
-            <button href="../profil/profil.html" class="cta-button" type="submit">Valider le formulaire</button>
+            <a href="../profil/profil.html" class="cta-button">Valider le formulaire</a>
         </div>
     </form>
 
