@@ -12,16 +12,20 @@
 .os-container {
     position: relative;
     display: inline-block;
-    width: 30%; /* Ajuste la largeur au conteneur parent */
-    max-width: 400px; /* Limite la taille si nécessaire */
-    margin: 0 auto; /* Centre le conteneur horizontalement */
+    width: 30%;
+    /* Ajuste la largeur au conteneur parent */
+    max-width: 400px;
+    /* Limite la taille si nécessaire */
+    margin: 0 auto;
+    /* Centre le conteneur horizontalement */
     margin: -3em 0;
     z-index: 0;
-    
+
 }
 
 .os {
-    width: 100%; /* L'image occupe toute la largeur du conteneur */
+    width: 100%;
+    /* L'image occupe toute la largeur du conteneur */
     height: auto;
     display: block;
     z-index: 0;
@@ -29,44 +33,60 @@
 
 .os-title {
     position: absolute;
-    top: 42%; /* Positionne au centre verticalement */
-    left: 50%; /* Positionne au centre horizontalement */
-    transform: translate(-50%, -50%); /* Centre parfaitement le texte */
-    font-size: 2rem; /* Taille du texte */
+    top: 42%;
+    /* Positionne au centre verticalement */
+    left: 50%;
+    /* Positionne au centre horizontalement */
+    transform: translate(-50%, -50%);
+    /* Centre parfaitement le texte */
+    font-size: 2rem;
+    /* Taille du texte */
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ajoute une ombre pour améliorer la lisibilité */
-    width: 80%; /* S'assure que le texte ne déborde pas */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Ajoute une ombre pour améliorer la lisibilité */
+    width: 80%;
+    /* S'assure que le texte ne déborde pas */
 }
 
 /* Grid Layout */
 .row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
-    gap: 1.5em; /* Espacement entre les cartes */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colonnes de largeur égale */
+    gap: 1.5em;
+    /* Espacement entre les cartes */
     padding-bottom: 1em;
 }
 
 .card {
-    height: auto; /* La carte s'adapte à son contenu */
+    height: auto;
+    /* La carte s'adapte à son contenu */
     border: 4px solid #733C19;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* Nécessaire pour positionner l'overlay */
+    position: relative;
+    /* Nécessaire pour positionner l'overlay */
 }
 
 .card img {
-    width: 100%; /* L'image occupe toute la largeur de la carte */
-    height: 400px; /* La hauteur est ajustée proportionnellement */
-    display: block; /* Évite les espaces blancs sous l'image */
-    object-fit: cover; /* Remplit la carte sans déformation */
+    width: 100%;
+    /* L'image occupe toute la largeur de la carte */
+    height: 400px;
+    /* La hauteur est ajustée proportionnellement */
+    display: block;
+    /* Évite les espaces blancs sous l'image */
+    object-fit: cover;
+    /* Remplit la carte sans déformation */
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .card a:hover img {
-    filter: brightness(80%); /* Assombrir l'image au survol */
-    transform: scale(1.05); /* Légèrement zoomer au survol */
+    filter: brightness(80%);
+    /* Assombrir l'image au survol */
+    transform: scale(1.05);
+    /* Légèrement zoomer au survol */
 }
 
 .card .overlay {
@@ -75,12 +95,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+    background: rgba(0, 0, 0, 0.6);
+    /* Fond semi-transparent */
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0; /* Caché par défaut */
+    opacity: 0;
+    /* Caché par défaut */
     transition: opacity 0.3s ease;
     text-align: center;
     font-size: 1.2rem;
@@ -89,5 +111,43 @@
 }
 
 .card:hover .overlay {
-    opacity: 1; /* Affiche l'overlay au survol */
+    opacity: 1;
+    /* Affiche l'overlay au survol */
+}
+
+
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.os-image {
+    width: 500px;
+    animation: rotate-and-move 3s ease-in-out infinite;
+}
+
+@keyframes rotate-and-move {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+    }
+
+    10% {
+        transform: rotate(0deg) translateY(20px);
+    }
+
+    25% {
+        transform: rotate(0deg) translateY(0);
+    }
+
+    100% {
+        transform: rotate(1440deg);
+    }
+}
+
+.hidden {
+    display: none;
+    /* Cache les éléments */
 }
