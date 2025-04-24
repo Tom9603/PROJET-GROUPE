@@ -45,10 +45,9 @@
   </header>
   <!-- MAIN -->
   <main class="container">
-    <div><h2 id="#inscription">Inscription<h2>
-    </div>
     <form method="post">
         <fieldset>
+            <h2 id="#inscription">Inscription<h2></h2>
             <div class="group-fields">
                 <div class="left-group">
                   <div class="field">
@@ -80,7 +79,8 @@
                   </div>
                 </div>
               </div>
-              
+        </fieldset>
+        <fieldset>    
             <div class="img-profil">
                 <label for="upload" class="image-upload">
                     <img src="http://147.93.52.14/test/img/icon1.png" alt="Ajouter une image">
@@ -89,20 +89,24 @@
 
 
             </div>
-            <div class="group-checkboxes">
+            <div class="group-button">
                 <div class="sex">
-                  <p>Sexe :</p>
-                  <button class="toggle-button">Mâle</button>
-                  <button class="toggle-button">Femelle</button>
-                  <button class="toggle-button">Woof ?</button>
-                </div>
-              
-                <div class="search">
-                  <p>Je recherche :</p>
-                  <button class="toggle-button">Mâle</button>
-                  <button class="toggle-button">Femelle</button>
-                  <button class="toggle-button">Woof ?</button>
-                </div>
+                    <p>Sexe</p>
+                    <div class="toggle-group">
+                      <button class="toggle-button">Mâle</button>
+                      <button class="toggle-button">Femelle</button>
+                      <button class="toggle-button">Woof ?</button>
+                    </div>
+                  </div>
+                  
+                  <div class="search">
+                    <p>Je recherche</p>
+                    <div class="toggle-group">
+                      <button class="toggle-button">Mâle</button>
+                      <button class="toggle-button">Femelle</button>
+                      <button class="toggle-button">Woof ?</button>
+                    </div>
+                  </div>
               </div>              
             <div class="field select">
                 <p>Intéressé par :</p>
@@ -115,6 +119,8 @@
                     <div class="field">
                 </select>
             </div>
+        </fieldset>
+        <fieldset>
             <div class="group-textareas">
                 <div class="bio">
                   <p>Biographie</p>
@@ -134,16 +140,24 @@
   <!-- FOOTER -->
   <footer class="footer">
     &copy; 2025 Dog Dating. Tous droits réservés.
-  </footer>
-  <script>
-    const boutons = document.querySelectorAll(".toggle-button");
-  
-    boutons.forEach((bouton) => {
-      bouton.addEventListener("click", function (e) {
-        e.preventDefault();
-        bouton.classList.toggle("active");
-      });
-    });
-  </script>
+    <script>
+        const groupes = document.querySelectorAll(".toggle-group");
+      
+        groupes.forEach((groupe) => {
+          const boutons = groupe.querySelectorAll(".toggle-button");
+      
+          boutons.forEach((bouton) => {
+            bouton.addEventListener("click", function (e) {
+              e.preventDefault();
+      
+              // Désélectionner tous les boutons du groupe
+              boutons.forEach((b) => b.classList.remove("active"));
+      
+              // Activer le bouton cliqué
+              bouton.classList.add("active");
+            });
+          });
+        });
+      </script>
 </body>
 </html>

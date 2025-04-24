@@ -1,10 +1,15 @@
+body {
+    user-select: none;
+}
 fieldset {
     padding: 5rem;
-    background: #fcfcfc50; /* blanc avec transparence */
-    backdrop-filter: blur(10px);         /* flou derrière */
-    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+    background: #fcfcfc50;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 25px;
-    border: 3px solid #733C19; /* optionnel, joli effet */
+    border: 3px solid #733C19;
+    padding-bottom: 7rem;
+    margin-bottom: 5rem;
 }
 
 input {
@@ -31,7 +36,7 @@ textarea {
 .image-upload img {
     cursor: pointer;
     width: 50%;
-    padding-top: 2rem;
+    padding-bottom: 7rem;
 }
 .group-fields {
     display: flex;
@@ -55,11 +60,11 @@ textarea {
     margin-bottom: 1rem;
   }
 
-  .group-checkboxes {
+  .group-button {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 10rem;
+    gap: 15rem;
     width: 100%;
     margin-bottom: 2rem;
     border-radius: 2rem;
@@ -68,7 +73,7 @@ textarea {
   .sex,
   .search {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     max-width: 45%;
     gap: 1rem;
   }
@@ -80,7 +85,11 @@ textarea {
     gap: 0.5rem;
     margin: 0.3rem 0;
   }
-
+  .toggle-group {
+    display: flex;
+    gap: 1rem;
+  }
+  
   .toggle-button {
     background-color: #883b08;
     color: white;
