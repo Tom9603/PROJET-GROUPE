@@ -1,5 +1,37 @@
+/* Généralité */
 .container {
     padding: 1em 1em 0 1em;
+}
+
+.container h2 {
+    padding: 1em 1em 0 1em;
+    text-transform: uppercase;
+}
+
+.os-container {
+    position: relative;
+    display: inline-block;
+    width: 30%; /* Ajuste la largeur au conteneur parent */
+    max-width: 400px; /* Limite la taille si nécessaire */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    margin: -3em 0;
+}
+
+.os {
+    width: 100%; /* L'image occupe toute la largeur du conteneur */
+    height: auto;
+    display: block;
+}
+
+.os-title {
+    position: absolute;
+    top: 42%; /* Positionne au centre verticalement */
+    left: 50%; /* Positionne au centre horizontalement */
+    transform: translate(-50%, -50%); /* Centre parfaitement le texte */
+    font-size: 2rem; /* Taille du texte */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ajoute une ombre pour améliorer la lisibilité */
+    width: 80%; /* S'assure que le texte ne déborde pas */
 }
 
 /* Grid Layout */
@@ -17,6 +49,7 @@
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Nécessaire pour positionner l'overlay */
 }
 
 .card img {
@@ -24,9 +57,33 @@
     height: 400px; /* La hauteur est ajustée proportionnellement */
     display: block; /* Évite les espaces blancs sous l'image */
     object-fit: cover; /* Remplit la carte sans déformation */
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+.card a:hover img {
+    filter: brightness(80%); /* Assombrir l'image au survol */
+    transform: scale(1.05); /* Légèrement zoomer au survol */
+}
+
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Caché par défaut */
+    transition: opacity 0.3s ease;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.card:hover .overlay {
+    opacity: 1; /* Affiche l'overlay au survol */
 }

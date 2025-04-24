@@ -1,9 +1,10 @@
 body {
     user-select: none;
 }
+
 fieldset {
-    padding: 5rem;
-    background: #fcfcfc50;
+    padding-top: 2.5em;
+    background: #d6cfca33;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 25px;
@@ -27,6 +28,16 @@ textarea {
     padding: 2rem 2rem;
 }
 
+h2 {
+    padding-bottom: 0.1rem;
+    font-size: 2.7em
+}
+
+hr {
+    width: 50%;
+    color: #733C19;
+    border: 0.1em solid #733C19;
+}
 .sex p {
     margin-right: 1rem;
 }
@@ -36,7 +47,7 @@ textarea {
 .image-upload img {
     cursor: pointer;
     width: 50%;
-    padding-bottom: 7rem;
+    padding-bottom: 3rem;
 }
 .group-fields {
     display: flex;
@@ -100,7 +111,7 @@ textarea {
   }
 
   .toggle-button.active {
-    background-color: #dd1515;
+    background-color: #D6532B;
     color: white;
   }
   
@@ -119,7 +130,7 @@ textarea {
     display: flex;
     justify-content: center;
     gap: 7rem;
-    margin-bottom: 2rem;
+    padding-bottom: 3em;
   }
   
   .group-textareas .bio,
@@ -137,5 +148,11 @@ textarea {
   }
   
   .toolbar {
-    padding-top: 10rem;
+    padding-top: 7rem;
+  }
+
+  .cta-button {
+    font-size: 1.3em;
+    text-decoration: none;
+    background-color: #D6532B;
   }
