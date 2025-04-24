@@ -29,7 +29,6 @@ textarea {
 }
 
 h2 {
-    padding-bottom: 0.1rem;
     font-size: 2.7em
 }
 
@@ -37,6 +36,42 @@ hr {
     width: 50%;
     color: #733C19;
     border: 0.1em solid #733C19;
+}
+.os-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    position: relative; /* Ajouter cette ligne */
+    margin-bottom: -4em;
+    margin-top: -4em;
+}
+
+.os {
+    width: 40%;
+    height: auto;
+}
+
+.os-title {
+    position: absolute;
+    top: 47%; /* Ajuste cette valeur pour le positionner correctement */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    width: 80%;
+}
+
+
+/* Assurez-vous que l'image et le titre sont alignés */
+.os-container h2 {
+    margin-top: 10px; /* Peut être ajusté pour centrer verticalement */
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    width: 80%;
 }
 .sex p {
     margin-right: 1rem;
@@ -54,7 +89,7 @@ hr {
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 2rem;
-    gap: 10rem;
+    gap: 20rem;
   }
   
   .left-group,
@@ -156,3 +191,40 @@ hr {
     text-decoration: none;
     background-color: #D6532B;
   }
+
+/* Style pour la modal */
+.modal {
+    display: none; /* Initialement cachée */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* S'assurer que la modal est au-dessus des autres éléments */
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    width: 300px;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Gris clair */
+    border-top: 8px solid #3498db; /* Bleu */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+/* Animation pour le loader */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
