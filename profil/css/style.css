@@ -16,12 +16,15 @@
     max-width: 400px; /* Limite la taille si nécessaire */
     margin: 0 auto; /* Centre le conteneur horizontalement */
     margin: -3em 0;
+    z-index: 0;
+    
 }
 
 .os {
     width: 100%; /* L'image occupe toute la largeur du conteneur */
     height: auto;
     display: block;
+    z-index: 0;
 }
 
 .os-title {

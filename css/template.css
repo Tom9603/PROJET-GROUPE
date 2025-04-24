@@ -37,6 +37,8 @@ header {
 	justify-content: center;
 	background-color: #733C19;
 	padding: 1em;
+	z-index: 1;
+	position: relative;
 }
 
 footer {
