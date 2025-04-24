@@ -1,6 +1,7 @@
-form {
+fieldset {
     padding: 5rem;
     background-color: white;
+    
 }
 
 input {
@@ -17,6 +18,7 @@ textarea {
     border-radius: 1.5rem;
     padding: 2rem 2rem;
 }
+
 .sex p {
     margin-right: 1rem;
 }
@@ -26,6 +28,7 @@ textarea {
 .image-upload img {
     cursor: pointer;
     width: 50%;
+    padding-top: 2rem;
 }
 .group-fields {
     display: flex;
@@ -56,6 +59,7 @@ textarea {
     gap: 10rem;
     width: 100%;
     margin-bottom: 2rem;
+    border-radius: 2rem;
   }
   
   .sex,

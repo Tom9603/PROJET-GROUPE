@@ -85,6 +85,10 @@ main {
 	color: #e94e3c;
 }
 
+p {
+	font-weight: 600px;
+}
+
 /************************* HEADER *************************/
 
 .logo-container {
