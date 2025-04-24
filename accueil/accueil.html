@@ -59,6 +59,17 @@
 
 	<main class="container">
 
+		<ul class="bxslider">
+			<li><img src="https://picsum.photos/id/22/170/200"></li>
+			<li><img src="https://picsum.photos/id/23/170/200"></li>
+			<li><img src="https://picsum.photos/id/24/170/200"></li>
+			<li><img src="https://picsum.photos/id/25/170/200"></li>
+			<li><img src="https://picsum.photos/id/26/170/200"></li>
+			<li><img src="https://picsum.photos/id/27/170/200"></li>
+			<li><img src="https://picsum.photos/id/28/170/200"></li>
+			<li><img src="https://picsum.photos/id/29/170/200"></li>
+		  </ul>
+
         <section class="presentation">
 
             <h2> Première visite ?  </h2>
@@ -80,23 +91,7 @@
 
         <section class="menu-photo">
             <h2 class="titre-section"> Profils du jour </h2>
-            <div class="slider slider1">
-                <div> <img src="./ressources/img/chien1.png"></div>
-                <div> <img src="./ressources/img/chien2.png"></div>
-                <div> <img src="./ressources/img/chienrobe.png"></div>
-            </div>
-
-            <div class="slider slider2">
-                <div> <img src="./ressources/img/chien2.png"></div>
-                <div> <img src="./ressources/img/chien1.png"></div>
-                <div> <img src="./ressources/img/chienrobe.png"></div>
-            </div>
-
-            <div class="slider slider3">
-                <div> <img src="./ressources/img/chienrobe.png"></div>
-                <div> <img src="./ressources/img/chien2.png"></div>
-                <div> <img src="./ressources/img/chien1.png"></div>
-            </div>
+            
         </section>
 
 		<p>Parce que nos amis à quatre pattes méritent aussi l'amour !</p>
@@ -110,9 +105,14 @@
 	</footer>
 
     <script>
-        $(document).ready(function(){
-          $(".slider").bxSlider();
-        });
+        $('.bxslider').bxSlider({
+  			minSlides: 4,
+  			maxSlides: 4,
+  			slideWidth: 170,
+  			slideMargin: 10,
+  			ticker: true,
+  			speed: 30000
+		});
       </script>
 
 </body>
