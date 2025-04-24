@@ -1,6 +1,7 @@
-form {
+fieldset {
     padding: 5rem;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    
 }
 
 input {
@@ -17,6 +18,7 @@ textarea {
     border-radius: 1.5rem;
     padding: 2rem 2rem;
 }
+
 .sex p {
     margin-right: 1rem;
 }
@@ -26,6 +28,7 @@ textarea {
 .image-upload img {
     cursor: pointer;
     width: 50%;
+    padding-top: 2rem;
 }
 .group-fields {
     display: flex;
@@ -56,6 +59,7 @@ textarea {
     gap: 10rem;
     width: 100%;
     margin-bottom: 2rem;
+    border-radius: 2rem;
   }
   
   .sex,
@@ -73,9 +77,30 @@ textarea {
     gap: 0.5rem;
     margin: 0.3rem 0;
   }
+
+  .toggle-button {
+    background-color: #D6532B;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .toggle-button.active {
+    background-color: #2ecc71; /* une autre couleur, ici vert */
+    color: white;
+  }
   
+  .sex input {
+    border-radius: 3rem;
+  }
   .select {
     padding: 5rem;
+    border-radius: 2rem;
+  }
+  .object {
+    border-radius: 2rem;
   }
 
   .group-textareas {
