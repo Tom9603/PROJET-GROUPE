@@ -1,45 +1,32 @@
 .container {
-    padding: 1em;
+    padding: 1em 1em 0 1em;
 }
 
-.profile-card {
-    cursor: pointer;
+/* Grid Layout */
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
+    gap: 1.5em; /* Espacement entre les cartes */
+    padding-bottom: 1em;
 }
 
-.card-hover-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    /* fond semi-transparent */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+.card {
+    height: auto; /* La carte s'adapte à son contenu */
+    border: 4px solid #733C19;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profile-card:hover .card-hover-text {
-    opacity: 1;
+.card img {
+    width: 100%; /* L'image occupe toute la largeur de la carte */
+    height: 400px; /* La hauteur est ajustée proportionnellement */
+    display: block; /* Évite les espaces blancs sous l'image */
+    object-fit: cover; /* Remplit la carte sans déformation */
 }
 
-.card-hover-text h5 {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.card-hover-text p {
-    font-size: 0.9rem;
-}
-
-.profile-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* recadre automatiquement */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
