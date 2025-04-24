@@ -1,7 +1,10 @@
 fieldset {
     padding: 5rem;
-    background-color: rgb(255, 255, 255);
-    
+    background: #fcfcfc50; /* blanc avec transparence */
+    backdrop-filter: blur(10px);         /* flou derrière */
+    -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+    border-radius: 25px;
+    border: 3px solid #733C19; /* optionnel, joli effet */
 }
 
 input {
@@ -79,7 +82,7 @@ textarea {
   }
 
   .toggle-button {
-    background-color: #D6532B;
+    background-color: #883b08;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -88,7 +91,7 @@ textarea {
   }
 
   .toggle-button.active {
-    background-color: #2ecc71; /* une autre couleur, ici vert */
+    background-color: #dd1515;
     color: white;
   }
   
@@ -125,5 +128,5 @@ textarea {
   }
   
   .toolbar {
-    padding: 5rem;
+    padding-top: 10rem;
   }
