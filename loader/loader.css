@@ -1,0 +1,26 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .os-image {
+    width: 100px; 
+    animation: rotate-and-move 3s ease-in-out infinite;
+  }
+  
+  @keyframes rotate-and-move {
+    0% {
+      transform: rotate(0deg) translateY(0px);
+    }
+    10% {
+        transform: rotate(0deg) translateY(20px);
+      }
+    25% {
+      transform: rotate(0deg)  translateY(0);
+    }
+    100% {
+      transform: rotate(1440deg);
+    }
+  }
