@@ -7,6 +7,21 @@
     padding: 1em 1em 0 1em;
     text-transform: uppercase;
 }
+/*
+.header::after {
+    content: '';
+    display: block;
+    height: 70px; 
+    background: url('../ressources/img/grass2.png') repeat-x; 
+    background-size: contain;
+    position: absolute;
+    bottom: -50px; 
+    left: 0;
+    right: 0;
+    z-index: 0;
+    transform: rotate(180deg);
+}
+*/
 
 /* OS avec titre */
 .os-container {
@@ -92,6 +107,31 @@
     text-align: center;
     font-size: 2rem;
     padding: 10px;
+}
+
+.overlay p {
+    position: absolute;
+    top: 10px;
+    width: 90%;
+}
+
+.overlay a {
+    text-decoration: none;
+    color: white;
+}
+
+.overlay i {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 10rem;
+}
+
+.overlay i:hover {
+    color: #D7512B;
+    transform: translate(-50%, 0) scale(1.2); /* Combine le centrage et le scale */
+    transition: transform 0.3s ease;
 }
 
 .card:hover .overlay {
