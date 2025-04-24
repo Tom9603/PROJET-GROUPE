@@ -1,6 +1,6 @@
 fieldset {
     padding: 5rem;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     
 }
 
@@ -77,9 +77,30 @@ textarea {
     gap: 0.5rem;
     margin: 0.3rem 0;
   }
+
+  .toggle-button {
+    background-color: #D6532B;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .toggle-button.active {
+    background-color: #2ecc71; /* une autre couleur, ici vert */
+    color: white;
+  }
   
+  .sex input {
+    border-radius: 3rem;
+  }
   .select {
     padding: 5rem;
+    border-radius: 2rem;
+  }
+  .object {
+    border-radius: 2rem;
   }
 
   .group-textareas {

@@ -92,16 +92,16 @@
             <div class="group-checkboxes">
                 <div class="sex">
                   <p>Sexe :</p>
-                  <label><input type="checkbox" name="sex" value="male"> Mâle</label><br>
-                  <label><input type="checkbox" name="sex" value="female"> Femelle</label><br>
-                  <label><input type="checkbox" name="sex" value="woof"> Woof ?</label>
+                  <button class="toggle-button">Mâle</button>
+                  <button class="toggle-button">Femelle</button>
+                  <button class="toggle-button">Woof ?</button>
                 </div>
               
                 <div class="search">
                   <p>Je recherche :</p>
-                  <label><input type="checkbox" name="search" value="male"> Mâle</label><br>
-                  <label><input type="checkbox" name="search" value="female"> Femelle</label><br>
-                  <label><input type="checkbox" name="search" value="woof"> Woof ?</label>
+                  <button class="toggle-button">Mâle</button>
+                  <button class="toggle-button">Femelle</button>
+                  <button class="toggle-button">Woof ?</button>
                 </div>
               </div>              
             <div class="field select">
@@ -121,7 +121,7 @@
                   <textarea placeholder="Plutôt croquettes ou pâté ? Courir après les chats ou le facteur ? Présente-toi !"></textarea>
                 </div>
                 <div class="passions">
-                  <p>Mes passions :</p>
+                  <p>Mes passions</p>
                   <textarea placeholder="Aboyer toute la journée, mordiller mes jouets..."></textarea>
                 </div>
               </div>              
@@ -136,5 +136,15 @@
   <footer class="footer">
     &copy; 2025 Dog Dating. Tous droits réservés.
   </footer>
+  <script>
+    const boutons = document.querySelectorAll(".toggle-button");
+  
+    boutons.forEach((bouton) => {
+      bouton.addEventListener("click", function (e) {
+        e.preventDefault();
+        bouton.classList.toggle("active");
+      });
+    });
+  </script>
 </body>
 </html>
