@@ -45,6 +45,7 @@
   </header>
   <!-- MAIN -->
   <main class="container">
+
     <div class="os-container">
         <img src="./ressources/os2.png" alt="Os" class="os">
         <h2 class="os-title">Inscription</h2>
@@ -143,45 +144,50 @@
         <div class="modal-content">
             <img src="../loader/img/os.png" alt="Chargement..." class="loader-image" />
             <div class="loader"></div> <!-- Loader animé -->
-            <p>Chargement...</p>
         </div>
     </div>
   </main>
   <!-- FOOTER -->
   <footer class="footer">
     &copy; 2025 Dog Dating. Tous droits réservés.
-    <script>
-        const groupes = document.querySelectorAll(".toggle-group");
-      
-        groupes.forEach((groupe) => {
-          const boutons = groupe.querySelectorAll(".toggle-button");
-      
-          boutons.forEach((bouton) => {
-            bouton.addEventListener("click", function (e) {
-              e.preventDefault();
-      
-              // Désélectionner tous les boutons du groupe
-              boutons.forEach((b) => b.classList.remove("active"));
-      
-              // Activer le bouton cliqué
-              bouton.classList.add("active");
-            });
-          });
-        });
-        const loadButton = document.getElementById('loadButton');
-        const loaderModal = document.getElementById('loaderModal');
+    <div class="logo-footer"><img src="http://147.93.52.14/test/img/logo-remove.png" alt="Logo Dog Dating">
+    <p>Le contenu de ce site, y compris les textes, images, graphismes, logos, et autres éléments sont protégés par des droits d'auteur. Toute reproduction ou utilisation non autorisée des éléments présents sur ce site est interdite et constitue une violation des droits de propriété intellectuelle.</p>
+    </div>
+    <div class="mentions">
+      <a href="#">Conditions Générales d'Utilisation</a>
+      <a href="#">Politique de Confidentialité</a>
+      <a href="#">Mentions Légales</a>
+    </div>
+  </footer>
 
-        // Fonction pour afficher la modal et démarrer le loader
-        loadButton.addEventListener('click', function(e) {
-            e.preventDefault(); // Empêcher la soumission du formulaire si nécessaire
-            loaderModal.style.display = 'flex'; // Afficher la modal
+<!-- Scripts JS -->
+<script>
+  // 1. Toggle des boutons "sexe" et "je recherche"
+  document.querySelectorAll(".toggle-group").forEach(group => {
+    const buttons = group.querySelectorAll(".toggle-button");
+    buttons.forEach(button => {
+      button.addEventListener("click", e => {
+        e.preventDefault();
+        buttons.forEach(b => b.classList.remove("active"));
+        button.classList.add("active");
+      });
+    });
+  });
 
-            // Simulation du temps de chargement avant de rediriger
-            setTimeout(function() {
-                // Redirige vers la page souhaitée après 2 secondes
-                window.location.href = '../profil/profil.html'; // Remplace par l'URL de la page cible
-            }, 2000); // 2000 ms = 2 secondes
-        });
-      </script>
+  // 2. Gestion du loader modal lors du clic sur "Enregistrer"
+  const loadButton = document.getElementById("loadButton");
+  const loaderModal = document.getElementById("loaderModal");
+
+  loadButton.addEventListener("click", function (e) {
+    e.preventDefault(); // Empêche la redirection immédiate
+    loaderModal.style.display = "flex"; // Affiche le loader modal
+
+    // Après 2 secondes, redirige vers la page profil
+    setTimeout(() => {
+      window.location.href = loadButton.href;
+    }, 2000);
+  });
+</script>
+ 
 </body>
 </html>

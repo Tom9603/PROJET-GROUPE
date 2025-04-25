@@ -1,6 +1,10 @@
+/********************* TOOLS **********************/
+
 body {
     user-select: none;
 }
+
+/********************* GENERALITIES **********************/
 
 fieldset {
     padding-top: 2.5em;
@@ -29,7 +33,7 @@ textarea {
 }
 
 h2 {
-    font-size: 2.7em
+    font-size: 2.7em !important;
 }
 
 hr {
@@ -37,6 +41,9 @@ hr {
     color: #733C19;
     border: 0.1em solid #733C19;
 }
+
+/********************* OS TITRE **********************/
+
 .os-container {
     display: flex;
     flex-direction: column;
@@ -73,40 +80,46 @@ hr {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
     width: 80%;
 }
+
+/********************* UPLOAD PHOTO ET INPUT **********************/
+
 .sex p {
     margin-right: 1rem;
 }
+
 .search p {
     margin-right: 1rem;
 }
+
 .image-upload img {
     cursor: pointer;
     width: 50%;
     padding-bottom: 3rem;
 }
+
 .group-fields {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 2rem;
     gap: 20rem;
-  }
+}
   
-  .left-group,
-  .right-group {
+.left-group,
+.right-group {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 200px;
-  }
+}
   
-  .field {
+.field {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
-  }
+}
 
-  .group-button {
+.group-button {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -114,85 +127,126 @@ hr {
     width: 100%;
     margin-bottom: 2rem;
     border-radius: 2rem;
-  }
+}
   
-  .sex,
-  .search {
+.sex,
+.search {
     display: flex;
     flex-direction: column;
     max-width: 45%;
     gap: 1rem;
-  }
+}
   
-  .sex label,
-  .search label {
+.sex label,
+.search label {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin: 0.3rem 0;
-  }
-  .toggle-group {
+}
+
+.sex input {
+  border-radius: 3rem;
+}
+
+.select {
+  padding: 5rem;
+  border-radius: 2rem;
+}
+
+.object {
+  border-radius: 2rem;
+}
+
+.group-textareas {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  padding-bottom: 3em;
+}
+
+.group-textareas .bio,
+.group-textareas .passions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 40%;
+}
+
+.group-textareas textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+}
+.toggle-group {
     display: flex;
     gap: 1rem;
-  }
-  
-  .toggle-button {
-    background-color: #883b08;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
+}
 
-  .toggle-button.active {
-    background-color: #D6532B;
-    color: white;
-  }
-  
-  .sex input {
+.sex input {
     border-radius: 3rem;
-  }
-  .select {
+}
+
+.select {
     padding: 5rem;
     border-radius: 2rem;
-  }
-  .object {
+}
+  
+.object {
     border-radius: 2rem;
-  }
+}
 
-  .group-textareas {
+.group-textareas {
     display: flex;
     justify-content: center;
     gap: 7rem;
     padding-bottom: 3em;
-  }
+}
   
-  .group-textareas .bio,
-  .group-textareas .passions {
+.group-textareas .bio,
+.group-textareas .passions {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 40%;
-  }
+}
   
-  .group-textareas textarea {
+.group-textareas textarea {
     width: 100%;
     height: 100px;
     resize: vertical;
-  }
-  
-  .toolbar {
-    padding-top: 7rem;
-  }
+}
 
-  .cta-button {
+/********************* TOGGLE **********************/
+
+.toggle-button.active {
+    background-color: #D6532B;
+    color: white;
+}
+
+.toggle-button {
+  background-color: #883b08;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/********************* BOUTON FORM **********************/
+  
+.toolbar {
+    padding-top: 7rem;
+}
+
+.cta-button {
     font-size: 1.3em;
     text-decoration: none;
     background-color: #D6532B;
-  }
+}
 
-/* Style pour la modal */
+/********************* MODAL **********************/
+
 .modal {
     display: none; /* Initialement cachée */
     position: fixed;
@@ -207,50 +261,66 @@ hr {
 }
 
 .modal-content {
-    background-color: white;
     border-radius: 10px;
     padding: 2rem;
     text-align: center;
     width: 300px;
-}
-
-.loader {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-direction: column;
 }
 
-.os-image {
-    width: 500px;
-    animation: rotate-and-move 3s ease-in-out infinite;
+/********************* LOADER **********************/
+
+#loaderModal {
+  display: none; /* Le modal est caché par défaut */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
 }
+
+#loaderModal img {
+  width: 30em;
+  height: auto;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: block;
+  position: relative;
+  margin-right: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-image {
+  width: 100px;
+  animation: rotate-and-move 2s cubic-bezier(0.25, 0, 0.75, 1) infinite;
+}
+
 
 @keyframes rotate-and-move {
-    0% {
-        transform: rotate(0deg) translateY(0px);
-    }
+  0% {
+      transform: rotate(0deg) translateY(0px);
+  }
 
-    10% {
-        transform: rotate(0deg) translateY(20px);
-    }
+  10% {
+      transform: rotate(0deg) translateY(20px);
+  }
 
-    25% {
-        transform: rotate(0deg) translateY(0);
-    }
+  25% {
+      transform: rotate(0deg) translateY(0);
+  }
 
-    100% {
-        transform: rotate(1440deg);
-    }
-}
-
-.hidden {
-    display: none;
-    /* Cache les éléments */
-}
-
-/* Animation pour le loader */
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  100% {
+      transform: rotate(1440deg);
+  }
 }
